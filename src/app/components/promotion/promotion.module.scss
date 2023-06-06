@@ -1,0 +1,116 @@
+.container {
+  max-width: 255px;
+  width: 100%;
+  background: #1b1a1a;
+  padding: 30px 10px;
+
+  .promotionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    .promotion {
+      &:first-child {
+        background: linear-gradient(
+          152deg,
+          rgba(59, 60, 59, 0.35) 20.03%,
+          rgba(173, 15, 10, 0.35)
+        );
+      }
+      &:last-child {
+        background: linear-gradient(
+          152deg,
+          rgba(59, 60, 59, 0.35) 44.03%,
+          rgba(102, 187, 106, 0.35)
+        );
+      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: end;
+
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        .promotionTitle {
+          transform: scale(1.1);
+          transition: transform 0.2s ease-in;
+        }
+      }
+
+      .promotionTitle {
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        padding-left: 14px;
+        text-transform: uppercase;
+      }
+
+      .promotionIcon {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .depositBonusContainer {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient(
+      152deg,
+      rgba(59, 60, 59, 0.35) 44.03%,
+      rgba(254, 196, 23, 0.35)
+    );
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      .depositBonusTitle {
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in;
+      }
+    }
+
+    .depositBonusTitle {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+
+      .depositBonusTitleSpan {
+        color: rgb(243, 186, 47);
+      }
+    }
+
+    .depositBonusIcon {
+      position: absolute;
+      right: -5px;
+      bottom: -12px;
+      z-index: 1;
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  .item {
+    color: #9e9e9e;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 20px;
+    display: block;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
