@@ -1,0 +1,95 @@
+.depositItemContainer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  border-radius: 20px;
+  padding-inline: 25px;
+  padding-top: 18px;
+  padding-bottom: 21px;
+  margin-top: 21px;
+  width: 503px;
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+
+  .amountContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 25px;
+
+    .labelAmount {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--white);
+
+      .amount {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        color: var(--amount);
+      }
+    }
+
+    .progressContainer {
+      width: 100%;
+
+      .progress {
+        position: relative;
+        width: 100%;
+
+        span {
+          position: absolute;
+          top: 3px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 9px;
+          font-weight: 600;
+          color: #ffffff;
+        }
+      }
+
+      progress {
+        width: 100%;
+        height: 13px;
+        border-radius: 10px;
+      }
+
+      progress::-webkit-progress-bar {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+
+      progress::-webkit-progress-value {
+        background: #f3ba2f;
+        border-radius: 10px;
+      }
+    }
+
+    .depositBtn {
+      background: var(--button-deposit);
+      padding-inline: 38px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      opacity: 0.5;
+    }
+  }
+}
+
+.depositItemContainer.opacity {
+  opacity: 0.5;
+}

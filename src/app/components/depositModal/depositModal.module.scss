@@ -3,12 +3,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #151617;
-  width: 594px;
-  height: 828px;
+  background: var(--modal);
   padding-left: 45px;
   padding-right: 45px;
   padding-top: 39px;
+  padding-bottom: 46px;
+  overflow: hidden;
 
   .depositHeader {
     display: flex;
@@ -20,6 +20,43 @@
       font-weight: 700;
       line-height: 40px;
     }
+  }
+
+  .circlePurple {
+    height: 131px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 11%;
+    right: 16%;
+    background: rgba(135, 76, 232, 0.56);
+    filter: blur(35px);
+  }
+
+  .circleBlue {
+    height: 102px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 35%;
+    left: -3%;
+    background: #2455d6;
+    opacity: 0.4;
+    filter: blur(25px);
+  }
+
+  .circleRed {
+    height: 147px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    bottom: 15%;
+    right: -18%;
+    background: linear-gradient(
+      180deg,
+      #f22fb0 0%,
+      rgba(245, 138, 37, 0) 100%,
+      #7061a3 100%
+    );
+    filter: blur(50px);
+    transform: rotate(-38.97deg);
   }
 
   .depositBtn {

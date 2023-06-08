@@ -1,0 +1,74 @@
+.descriptionModuleContainer {
+  padding-top: 39px;
+  padding-bottom: 60px;
+  background: var(--modal);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  max-width: 594px;
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--modal);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scroll);
+    border-radius: 3px;
+  }
+
+  .depositHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 46px;
+
+    .titleContainer {
+      display: flex;
+      align-items: center;
+
+      .depositTitle {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        margin-left: 13px;
+      }
+
+      .buttonBack {
+        height: 22px;
+      }
+    }
+  }
+
+  .descriptionContainer {
+    margin-top: 54px;
+    max-height: 650px;
+    padding-inline: 46px;
+    overflow: auto;
+    font-size: 16px;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+    }
+
+    .text {
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+
+      &:last-of-type {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .list {
+    padding-left: 40px;
+  }
+}

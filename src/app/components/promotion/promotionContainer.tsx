@@ -8,9 +8,13 @@ import React, { Dispatch, SetStateAction } from "react";
 
 interface ChildProps {
   setDepositModal: Dispatch<SetStateAction<boolean>>;
+  setOpenDescriptionModal: Dispatch<SetStateAction<boolean>>;
 }
 
-const PromotionContainer: React.FC<ChildProps> = ({ setDepositModal }) => {
+const PromotionContainer: React.FC<ChildProps> = ({
+  setDepositModal,
+  setOpenDescriptionModal,
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.promotionContainer}>
@@ -32,7 +36,10 @@ const PromotionContainer: React.FC<ChildProps> = ({ setDepositModal }) => {
       </div>
       <button
         className={styles.depositBonusContainer}
-        onClick={() => setDepositModal(true)}
+        onClick={() => {
+          setDepositModal(true);
+          setOpenDescriptionModal(false);
+        }}
       >
         <div className={styles.depositBonusTitle}>
           Deposit <span className={styles.depositBonusTitleSpan}> Bonus</span>
